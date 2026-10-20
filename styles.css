@@ -1,0 +1,24 @@
+
+#container {
+    display: flex;
+    flex-direction: column;
+    width: 800px;
+    aspect-ratio: 1;
+}
+
+.line-div {
+    display: inline-flex;
+    flex-direction:row;
+}
+
+.grid-div {
+    box-sizing: border-box;
+    background-color:antiquewhite;
+    flex: auto;
+    aspect-ratio: 1;
+    
+}
+
+.grid-div:hover {
+    background-color: black;
+}

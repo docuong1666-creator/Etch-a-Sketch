@@ -14,11 +14,15 @@ function createGrid(squareNum) {
 }
 }
 
+function randomRGB() {
+    return Math.floor(Math.random() * 256);
+}
+
 function paintGrid() { 
     const gridDiv = document.querySelectorAll('.grid-div');
 
     gridDiv.forEach( grid => grid.addEventListener('mouseenter', function() {
-        grid.style.backgroundColor = "gray";
+        grid.style.backgroundColor = `rgb(${randomRGB()},${randomRGB()},${randomRGB()})`;
 }))}
 
 createGrid(16);

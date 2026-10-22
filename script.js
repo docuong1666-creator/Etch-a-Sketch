@@ -21,8 +21,13 @@ function randomRGB() {
 function paintGrid() { 
     const gridDiv = document.querySelectorAll('.grid-div');
 
+    let opacity = 0.1;
+
     gridDiv.forEach( grid => grid.addEventListener('mouseenter', function() {
-        grid.style.backgroundColor = `rgb(${randomRGB()},${randomRGB()},${randomRGB()})`;
+        if (opacity < 1) {
+            opacity += 0.1;
+        }
+        grid.style.backgroundColor = `rgb(${randomRGB()},${randomRGB()},${randomRGB()},${opacity})`;
 }))}
 
 createGrid(16);
